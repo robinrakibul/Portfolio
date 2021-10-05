@@ -192,45 +192,7 @@
             </section>
 
             <!--===== CONTACT =====-->
-        <?php
-            $message_sent = false;
-            if(isset($_POST['email']) && $_POST['email'] != '') // VALID EMAIL
-            {
-                if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) //VALID EMAIL
-                {
-
-                    $userName = $_POST['name'];
-                    $userEmail = $_POST['email'];
-                    $messageSubject = $_POST['subject'];
-                    $message = $_POST['message'];
-        
-                    $to = "robinrakibulhassan@gmail.com";
-                    $body = "";
-        
-                    $body .= "From: ".$userName. "\r\n";
-                    $body .= "Email: ".$userEmail. "\r\n";
-                    $body .= "Message: ".$message. "\r\n";
-        
-                    mail($to,$messageSubject,$body);
-
-                    $message_sent = true;
-                    }
-
-                    else{
-                        $invalid = "Error Occured";
-                    }
-                }
-        ?>
-
-
             <section class="contact_section" id="contact">
-            <?php
-            if($message_sent):
-            ?>
-            <h3>Thanks, I will be in touch</h3>
-            <?php
-            else:
-            ?>
             <div class="contact_container">
             <h2 class="section-title">Contact Me</h2>
                 <form action="https://formspree.io/f/mnqlrble" method="POST" class="form">
@@ -251,9 +213,6 @@
                     </div>
                 </form>
             </div>
-            <?php
-            endif;
-            ?>
             </section>
         </main>
 

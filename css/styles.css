@@ -34,7 +34,6 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  margin: 3rem 0 0 0;
   font-family: 'Poppins', sans-serif;
   font-size: var(normalfont);
   color: white;
@@ -187,6 +186,14 @@ img{
 .home_title-color{
   color: #4070F4;
 }
+.home_title-color:hover{
+  color: aqua;
+  display: inline-block;
+  animation: rubberBand; 
+  animation-duration: 1s;
+}
+
+
 .home_social{
   display: flex;
   margin-top: var(--m-margin);
@@ -199,7 +206,10 @@ img{
   color: #4070F4;
 }
 .home_social-icon:hover{
-  color: blue;
+  color: aqua;
+  display: inline-block;
+  animation: jello; 
+  animation-duration: 1s;
 }
 .home_img{
   position: absolute;
@@ -228,6 +238,13 @@ img{
   row-gap: 2rem;
   text-align: center;
 }
+.section-title:hover{
+  color: aqua;
+  display:center(flex);
+  animation: bounce; 
+  animation-duration: 1s;
+}
+
 .about_subtitle{
   margin-bottom: 1rem;
 }
@@ -347,6 +364,14 @@ img{
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
+.footer_title:hover{
+  color: aqua;
+  display: inline-block;
+  animation: jello; 
+  animation-duration: 1s;
+}
+
 .footer_social{
   margin-bottom: 2rem;
 }
@@ -354,6 +379,12 @@ img{
   font-size: 1.5rem;
   color: #fff;
   margin: 0 1rem;
+}
+.footer_icon:hover{
+  color: aqua;
+  display: inline-block;
+  animation: jello; 
+  animation-duration: 1s;
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -413,6 +444,11 @@ img{
     width: 380px;
     bottom: 15%;
   }
+  .home_img:hover{
+    animation: pulse;
+    display: inline-block;
+    animation-duration: 3s;
+  }
 
   .about_container, .skills_container{
     grid-template-columns: repeat(2,1fr);
@@ -433,14 +469,79 @@ img{
   .contact_container{
     justify-items: center;
   }
-  .emailme{
-    color: #4070F4;
-    text-decoration: none;
-    font-size: x-large;
-  }
-  .emailme:hover{
-    color: white;
-  }
+ .contact_section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: ver(normalfont);
+  background-color: black;
+ }
+ .contact_container{
+  width:500px;
+  padding:2em;
+  color: white;
+  border: white;
+  border-style: solid;
+  background-color:black;
+}
+.form-group{
+  margin-bottom:1.5em;
+  transition:all .3s;
+}
+.form-control{
+  box-shadow:none;
+  border-radius:0;
+  border-color:white;
+  border-style:none none solid none;
+  width:100%;
+  font-size:1.25em;
+  transition:all .6s;
+}
+.form-control::placeholder{
+  color:black;
+}
+.form-control:focus{
+  box-shadow:none;
+  border-color:var(--font-hover-color);
+  outline:none;
+}
+.form-group:focus-within{
+  transform:scale(1.1,1.1);
+}
+
+.form-control:invalid:focus{
+  border-color:red;
+}
+.form-control:valid:focus{
+  border-color:green;
+}
+
+.btn{
+  background: 0 0 black;
+  border:1px solid white;
+  border-radius:3px;
+  color:var(--font-color);
+  font-size:1em;
+  padding:10 50px;
+  text-transform:uppercase;
+}
+.btn:hover{
+  border-color:var(--font-hover-color);
+  color:var(--font-hover-color);
+}
+textarea{
+  resize:none;
+}
+
+
+
+.focused > .form-label{
+  opacity:1;
+  transform:translateX(0px);
+
+}
 }
 
 @media screen and (min-width: 1024px){

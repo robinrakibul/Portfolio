@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
         <title>My Portfolio</title>
     </head>
@@ -36,7 +37,13 @@
             <!--===== HOME =====-->
             <section class="home grid" id="home">
                 <div class="home_data">
-                    <h1 class="home_title">Hi,<br>I am <span class="home_title-color">Robin</span><br> Web Designer</h1>
+                    <h1 class="home_title">Hi,<br>I am 
+                        <span class="home_title-color">R</span>
+                        <span class="home_title-color">o</span>
+                        <span class="home_title-color">b</span>
+                        <span class="home_title-color">i</span>
+                        <span class="home_title-color">n</span>
+                        <br> Web Designer</h1>
 
                     <a href="cv.html" class="button">Check My CV</a>
                 </div>
@@ -185,13 +192,68 @@
             </section>
 
             <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact Me</h2>
+        <?php
+            $message_sent = false;
+            if(isset($_POST['email']) && $_POST['email'] != '') // VALID EMAIL
+            {
+                if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) //VALID EMAIL
+                {
 
-                <div class="contact_container grid">
-                   <center><a href="mailto:robinrakibulhassan@gmail.com" class="emailme">Email Me</a></center>
-                    
-                </div>
+                    $userName = $_POST['name'];
+                    $userEmail = $_POST['email'];
+                    $messageSubject = $_POST['subject'];
+                    $message = $_POST['message'];
+        
+                    $to = "robinrakibulhassan@gmail.com";
+                    $body = "";
+        
+                    $body .= "From: ".$userName. "\r\n";
+                    $body .= "Email: ".$userEmail. "\r\n";
+                    $body .= "Message: ".$message. "\r\n";
+        
+                    mail($to,$messageSubject,$body);
+
+                    $message_sent = true;
+                    }
+
+                    else{
+                        $invalid = "Error Occured";
+                    }
+                }
+        ?>
+
+
+            <section class="contact_section" id="contact">
+            <?php
+            if($message_sent):
+            ?>
+            <h3>Thanks, I will be in touch</h3>
+            <?php
+            else:
+            ?>
+            <div class="contact_container">
+            <h2 class="section-title">Contact Me</h2>
+                <form action="https://formspree.io/f/mnqlrble" method="POST" class="form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="name" tabindex="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="valid email" tabindex="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Type message..." tabindex="4"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn">Send Message!</button>
+                    </div>
+                </form>
+            </div>
+            <?php
+            endif;
+            ?>
             </section>
         </main>
 

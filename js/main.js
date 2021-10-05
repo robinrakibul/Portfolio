@@ -56,6 +56,22 @@ sr.reveal('.work_img',{interval: 200});
 /*SCROLL CONTACT*/
 sr.reveal('.contact_input',{interval: 200}); 
 
+/*EMAIL VALIDATION/*
+$(function() {
+   
+    $(".form-control").on('focus', function(){
+
+        $(this).parents(".form-group").addClass('focused');
+
+    });
+
+    $(".form-control").on('blur', function(){
+
+        $(this).parents(".form-group").removeClass('focused');
+
+    });
+
+});
 
 
 

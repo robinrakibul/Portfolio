@@ -110,11 +110,7 @@ img{
   font-weight: 600;
 }
 @media screen and (max-width: 768px){
-  .emailme{
-    color: #4070F4;
-    text-decoration: none;
-    font-size: x-large;
-  }
+
   .nav_menu{
     position: fixed;
     top: 3rem;
@@ -540,13 +536,10 @@ textarea{
   resize:none;
 }
 
-
-
 .focused > .form-label{
   opacity:1;
   transform:translateX(0px);
 
-}
 }
 
 @media screen and (min-width: 1024px){
@@ -556,5 +549,10 @@ textarea{
   }
   .home_img{
     right: 5%;
+  }
+  .home_title{
+    font-size: var(--normal-font-size);
+    margin-top: 15%;
+    margin-bottom: 2.5rem;
   }
 }

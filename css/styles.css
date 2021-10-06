@@ -386,6 +386,11 @@ img{
   animation: jello; 
   animation-duration: 1s;
 }
+.fiverr:hover{
+  color: lightgreen;
+  font-weight: bolder;
+  font-size: x-large;
+}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px){

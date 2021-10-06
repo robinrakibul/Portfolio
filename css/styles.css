@@ -17,7 +17,6 @@
   }
 }
 
-
 /*===== z index =====*/
 :root{
   --z-back: -10;
@@ -541,7 +540,6 @@ textarea{
   }
 }
 .contact_container{
-  width:500px;
   padding:2em;
   color: white;
   border: white;

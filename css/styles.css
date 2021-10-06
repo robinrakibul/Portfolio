@@ -336,26 +336,6 @@ img{
   transform: scale(1.5);
 }
 
-/* ===== CONTACT =====*/
-.contact_input{
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: 600;
-  padding: 1rem;
-  border-radius: .5rem;
-  border: 1.5px solid #0E2431;
-  outline: none;
-  margin-bottom: 2rem;
-}
-.contact_button{
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
-}
-
 /* ===== FOOTER =====*/
 .footer{
   background-color: #0E2431;
@@ -560,7 +540,14 @@ textarea{
     right: 5%;
   }
 }
-
+.contact_container{
+  width:500px;
+  padding:2em;
+  color: white;
+  border: white;
+  border-style: solid;
+  background-color:black;
+}
 .web_color{
   margin: -2px;
   font-size: 61%;

@@ -475,6 +475,15 @@ img{
     grid-template-rows: repeat(2,1fr);
     column-gap: 2rem;
   }
+
+
+   .research_container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 2rem;
+  }
+
+  
   .contact_form{
     width: 360px;
   }
@@ -498,6 +507,7 @@ img{
   border-style: solid;
   background-color:black;
 }
+
 .form-group{
   margin-bottom:1.5em;
   transition:all .3s;

@@ -38,6 +38,7 @@ body{
   color: white;
   background-color: black;
 }
+
 h1,h2,p{
   margin: 0;
 }
@@ -177,6 +178,7 @@ img{
   font-size: var(--big-font-size);
   margin-top: 15%;
   margin-bottom: 2.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .home_title-color{
   color: #4070F4;

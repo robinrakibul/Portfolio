@@ -91,6 +91,7 @@ img{
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
 .l-header{
   width: 100%;
   position: fixed;
@@ -470,7 +471,7 @@ img{
     text-align: initial;
   }
   .about_img img{
-    width: 300px;
+    width: 280px;
   }
   .work_container{
     grid-template-columns: repeat(3, 1fr);

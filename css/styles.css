@@ -52,7 +52,6 @@ a{
 }
 img{
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -224,8 +223,8 @@ img{
   position: absolute;
   right: 0;
   bottom: 0;
-  top: 160px;
-  width: 220px;
+  top: 33%;
+  width: 44%;
 }
 
 /*BUTTONS*/
@@ -460,9 +459,8 @@ img{
     margin-right: 2rem;
   }
   .home_img{
-    height: 250px;
-    width: 250px;
-    margin-right: 20px;
+    height: 40%;
+    width: 30%;
   }
   .home_img:hover{
     animation: pulse;
@@ -578,7 +576,8 @@ textarea{
     margin-right: auto;
   }
   .home_img{
-    right: 5%;
+    right: 3%;
+    top: 30%;
     position: absolute;
   }
 }

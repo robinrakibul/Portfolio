@@ -6,17 +6,22 @@
   --big-font-size: 1.5rem;
 	h2font: 1.25rem;
 	normalfont: 0.938rem;
-	--m-margin: -2rem;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 0 auto;
+  width: 80%;
 }
 @media screen and (min-width: 768px){
   :root{
     --big-font-size: 3.5rem;
     h2font: 2rem;
     normalfont: 1rem;
-	--m-margin: 1rem;
   }
 }
-
 /*===== z index =====*/
 :root{
   --z-back: -10;
@@ -87,7 +92,6 @@ img{
   grid-template-columns: 100%;
   grid-column-gap: 2rem;
   width: calc(100% - 2rem);
-  margin-right: 0rem;
 }
 
 .l-header{
@@ -240,6 +244,8 @@ img{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
   background-color: rgb(19, 163, 91);
 }
+
+
 
 .research{
   display: inline-block;
@@ -489,7 +495,7 @@ img{
     column-gap: 2rem;
   }
 
-  
+
   .contact_form{
     width: 360px;
   }
